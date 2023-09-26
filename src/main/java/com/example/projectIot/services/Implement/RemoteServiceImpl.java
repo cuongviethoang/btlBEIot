@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -35,6 +37,7 @@ public class RemoteServiceImpl implements RemoteService {
     @Override
     public List<Remote> getAllRemotes() {
         List<Remote> remoteList = remoteRepo.getAllRemotes();
+        Collections.reverse(remoteList);
         return remoteList;
     }
 }

@@ -28,5 +28,5 @@ public class Data {
     private float light;
 
     @Column(name = "time")
-    private LocalDateTime time;
+    private String time;
 }
