@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "data")
@@ -19,13 +18,16 @@ public class Data {
     private int id;
 
     @Column(name = "temp", nullable = false)
-    private float temp;
+    private double temp;
 
     @Column(name = "humidity", nullable = false)
-    private float humidity;
+    private double humidity;
 
     @Column(name = "light", nullable = false)
-    private float light;
+    private double light;
+
+//    @Column(name = "dust", nullable = false)
+//    private double dust;
 
     @Column(name = "time")
     private String time;

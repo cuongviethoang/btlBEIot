@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface DataService {
 
-    void createData();
-
     List<Data> getAllDatas();
+
+    List<Data> getAllDataFromTime(String time);
 }

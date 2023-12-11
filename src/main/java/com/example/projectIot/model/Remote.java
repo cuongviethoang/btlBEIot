@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "remote")
@@ -18,11 +17,11 @@ public class Remote {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "bulb", nullable = false)
-    private String bulb;
+    @Column(name = "device", nullable = false)
+    private String device;
 
-    @Column(name = "fan", nullable = false)
-    private String fan;
+    @Column(name = "state", nullable = false)
+    private String state;
 
     @Column(name = "time")
     private String time;
